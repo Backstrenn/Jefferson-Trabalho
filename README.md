@@ -1,2 +1,2 @@
-# Jefferson-Trabalho
-Site jefferson sobre mim
+# gerenciador-de-orcamento
+Repositório dedicado ao trabalho do professor Jeferson

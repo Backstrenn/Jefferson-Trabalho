@@ -1,0 +1,253 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos globais */
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f4f4;
+  color: #2c3e50;
+  line-height: 1.6;
+  padding: 0 10%;
+}
+
+/* Cabeçalho */
+header {
+  background: #4caf50;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #fff;
+  color: #4caf50;
+  transition: background 0.3s ease;
+}
+
+header button:hover {
+  background: #e7e7e7;
+}
+
+/* Formulário */
+form {
+  max-width: 450px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"], input[type="number"], input[type="password"], select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bdc3c7;
+  border-radius: 8px;
+  transition: border-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, input[type="password"]:focus, select:focus {
+  border-color: #2bc037;
+  outline: none;
+}
+
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: #3cc02b;
+  border: none;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #a52a2a;
+}
+
+/* Títulos */
+h1, h2, h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+p {
+  text-align: center;
+  color: #c0392b;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  margin: 30px 0;
+  font-size: 16px;
+  color: #95a5a6;
+}
+
+/* Dashboard */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Folha animada */
+.leaf {
+  position: absolute;
+  bottom: -50px;
+  width: 30px;
+  height: 30px;
+  background: green;
+  opacity: 0.8;
+  animation: float 5s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100vh); }
+}
+
+/* Estilos da seção "Sobre Mim" */
+.sobre-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-image {
+  display: block;
+  max-width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 4px solid #4caf50;
+}
+
+/* Lista de habilidades e interesses */
+ul {
+  list-style-type: square;
+  color: #666;
+  padding-left: 20px;
+  margin-bottom: 30px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+/* Link do GitHub */
+.github-link {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.github-link:hover {
+  background-color: #45a049;
+}
+
+/* Estilos da barra de navegação */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 15px;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.header-link:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Conteúdo da aplicação */
+.app-content {
+  padding: 20px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .sobre-container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p, ul {
+    font-size: 1rem;
+  }
+
+  .github-link {
+    font-size: 0.9rem;
+    padding: 8px 15px;
+  }
+}
+/* animations.css */
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in-out forwards;
+  opacity: 0; /* Oculto antes da animação iniciar */
+}
+
+.fade-in-delay-1 {
+  animation-delay: 0.3s; /* Delay para o título */
+}
+
+.fade-in-delay-2 {
+  animation-delay: 0.6s; /* Delay para o link */
+}
+
+.fade-in-delay-3 {
+  animation-delay: 0.9s; /* Delay para o parágrafo */
+}
